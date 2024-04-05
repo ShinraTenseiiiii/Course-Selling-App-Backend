@@ -25,11 +25,11 @@ This is a backend application for a course selling platform built with Node.js, 
 
 2. Install dependencies
 
- ```  npm install
+ ```  npm install```
 
 3. Run the backend locally
 
- ``` nodemon index.js
+ ``` nodemon index.js```
 
 
 ## Routes
