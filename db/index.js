@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://pandeyjoydeep:PGb9bp4j5Ge1DCy9@cohort.fe4xv0a.mongodb.net/Course_Selling_App1');
+mongoose.connect(''); // connection url
 
 
 const AdminSchema = new mongoose.Schema({
