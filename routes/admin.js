@@ -23,9 +23,10 @@ router.post('/signin', async(req, res) => {
     const password = req.body.password;
 
 
-    const user = await Admin.find({ username,password})
+    const user = await Admin.findOne({ username,password})
 
     if (user) {
+      console.log("hi");
          const token =  jwt.sign({
       username,password
     },Jwt_Secret)
@@ -51,7 +52,9 @@ router.post('/courses', adminMiddleware, async(req, res) => {
     
 });
 
-router.get('/courses', adminMiddleware, (req, res) => {
+router.get('/courses', adminMiddleware, async (req, res) => {
+  const courseNames = await Course.find({})
+  res.json({courseNames})
 });
 
 module.exports = router;
